@@ -5,47 +5,81 @@
   box-sizing: border-box;
 }
 
-
-html{
+html {
   scroll-behavior: smooth;
 }
 
+/*HEADER START*/
+
+
 .header{
-  align-items: center;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   background-color: #7c9381;
   height: 15%;
-  box-shadow: 0 2px 30px rgb(98, 117, 98);
-}
-
-.main > img{
-position: absolute;
-width: 100%;
-height: 210%;
-opacity: 0.25;
-
-}
-h2{
-  padding: 1%;
-}
-
-#logo{
-  height: 80px;
   width: 100%;
-}
-
-.logo-title > h1{
-  padding-top: 10px;
-  padding-left: 10px;
-  align-self: center;
-  margin-bottom: 10px;
-  color: #05210c;
+  box-shadow: 0 2px 30px rgb(98, 117, 98);
 }
 
 .logo-title{
   display: flex;
-  justify-content:space-between;
+  justify-content:space-around;
+  align-items: start baseline;
+  width: 30%;
+  height: 100%;
+  margin-top: 10px;
+}
+
+.drop-contain{
+  position: relative;
+  display: inline-block;
+}
+
+/*100 and 40*/
+.dropdown{
+  width: 100%;
+  height: 40%;
+  text-align: center;
+  margin: 40% 20%;
+  border: transparent;
+}
+
+.drop-content{
+  display: none;
+}
+
+.drop-container:hover{
+  width: 40%;
+  height: 33%;
+  text-align: center;
+  margin: 40% 20%;
+  border: transparent;
+}
+
+.drop-contain:hover .drop-content{
+  display:block;
+  margin-left: 15%;
+}
+
+.bar{
+  width: 100%;
+  height: 100%;
+  background-color: #7c9381;
+  border: #7c9381 solid 0px;
+}
+
+ .logo-title{
+  display: flex;
+  justify-content: space-around;
+  vertical-align: center;
+  align-self: center;
+  color: #05210c;
+} 
+
+.title-text{
+  margin-right: 20%;
+  margin-top: 5%;
 }
 
 .header nav{
@@ -54,26 +88,41 @@ h2{
   text-align: 'center';
   font-family: "Arial";
   font-weight: bold;
+  width: 30%;
+  height: 40%;
+  text-align: center;
+  vertical-align: center;
+  font-size: 130%;
   opacity: 1;
  }
- 
-nav{
-   width: 30%;
-   height: 40%;
-   text-align: center;
-   vertical-align: center;
-   font-size: 130%;
- }
 
-nav > a{
+ .header nav > a{
   color: #0a2c12;
   text-decoration: none;
  }
 
-nav > a:hover{
+.header nav > a:hover{
   color: #bbd8c3;
  }
 
+
+/*HEADER END*/
+
+/*MAIN START*/
+
+
+.main > img{
+position: absolute;
+width: 100%;
+height: 210%;
+opacity: 0.25;
+}
+
+h2{
+  padding: 1%;
+}
+
+/*the title in the beginning of the homepage*/
 .title{
   text-align: center;
   padding: 5%;
@@ -87,15 +136,68 @@ nav > a:hover{
   color: green;
 }
 
-#title-foot{
-  color: rgb(148, 163, 152);
-}
-
 #divider{
   margin: 10 px;
   position: relative;
 }
 
+#title-foot{
+  color: rgb(148, 163, 152);
+}
+/*the title in the beginning of the homepage*/
+
+/*slideshow*/
+.slideshow-container {
+  position: relative;
+  max-width: 75%; 
+  margin: auto;
+  align-self: center;
+  box-sizing: border-box;
+  margin-top: -3%;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.mySlides {
+  display: none;
+}
+
+@keyframes fade {
+  0% { opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 3px;
+  user-select: none;
+}
+
+.prev {
+  left: 0;
+  cursor: w-resize;
+}
+
+.next {
+  right: 0;
+  cursor: e-resize;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+/*slideshow*/
+
+/*map*/
 /* Responsive map container */
 .int_map {
   display: flex;
@@ -117,7 +219,6 @@ nav > a:hover{
   transform: translateX(0%);
 }
 
-/* Adjust the link positions based on the map size */
 .int_map > a {
   position: absolute;
   color: black;
@@ -202,32 +303,22 @@ nav > a:hover{
   .int_map .NL { top: 37%; left: 97%; font-size: 13px;}
   .int_map .ArP { top: 25%; left: 90%; }
 }
+/*map*/
+
+
+/*MAIN END*/
+
+/*FOOTER START*/
+
 
 .footer{
   box-sizing: border-box;
   background-color: #dae4dd;
-  height: 30%;
+  height: 40%;
   width: 100%;
   text-align: center;
   position: relative;
-  box-shadow: 2px 0 30px rgb(98, 117, 98);
-}
-
-#social {
-  list-style-type: none;
-  display: flex;
-  justify-content: center; 
-  padding: 0;
-  height: 20%;
-}
-
-.socialMedia{
-  display: flex;
-  justify-content: center;
-  align-items: last baseline;
-  vertical-align: center;
-  width: 100%;
-  height: 10%;
+  box-shadow: 0px 0 20px rgb(98, 117, 98);
 }
 
 .Con-text{
@@ -242,55 +333,13 @@ nav > a:hover{
   font-weight: bold;
 }
 
-#social li{
-  margin: 0 20px ;
-}
-
-.slideshow-container {
-  position: relative;
-  max-width: 75%; 
-  margin: auto;
-  align-self: center;
-  box-sizing: border-box;
-  margin-top: -3%;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-}
-
-.mySlides {
-  display: none;
-}
-
-
-@keyframes fade {
-  0% { opacity: 0; }
-  20% { opacity: 1; }
-  80% { opacity: 1; }
-  100% { opacity: 0; }
-}
-
-
-.prev, .next {
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 3px;
-  user-select: none;
-}
-
-.prev {
-  left: 0;
-  cursor: w-resize;
-}
-
-.next {
-  right: 0;
-  cursor: e-resize;
+.socialMedia{
+  display: flex;
+  justify-content: center;
+  align-items: last baseline;
+  vertical-align: center;
+  width: 100%;
+  height: 10%;
 }
 
 .socialMedia a{
@@ -303,6 +352,18 @@ nav > a:hover{
   rgb(70, 125, 15);
 }
 
+#social {
+  list-style-type: none;
+  display: flex;
+  justify-content: center; 
+  padding: 0;
+  height: 20%;
+}
+
+#social li{
+  margin: 0 20px ;
+}
+
 .footerMessage{
   padding-top: 22px;
   margin-top: 22px;
@@ -312,10 +373,5 @@ nav > a:hover{
   color: rgb(147, 153, 147);
 }
 
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
 
-#slideinfo{
-  text-align: center;
-}
+/*FOOTER END*/
